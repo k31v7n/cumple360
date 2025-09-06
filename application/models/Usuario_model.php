@@ -6,6 +6,7 @@ class Usuario_model extends Centro_model {
 	public $nombre;
 	public $alias;
 	public $usuario_tipo_id;
+	public $clave;
 	public $empresa_id = null;
 
 	public function __construct($id="")

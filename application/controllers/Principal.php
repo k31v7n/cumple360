@@ -24,7 +24,6 @@ class Principal extends CI_Controller {
 			"menu" => "menu",
 			"user" => $this->ses,
 			"emp" => new Empresa_model($this->ses["empresa_id"]),
-			"solicitudes" => $this->Solicitud_model->_buscar($filto),
 			"scripts" => ["assets/js/admin.js"]
 		];
 
@@ -41,6 +40,7 @@ class Principal extends CI_Controller {
 			$datos["empresas"] = $this->Empresa_model->buscar();
 		}
 
+		$datos["solicitudes"] = $this->Solicitud_model->_buscar($filto);
 		$datos["vista"] = $vista;
 
 		$this->load->view("principal", $datos);

@@ -38,6 +38,17 @@ class Empresa extends CI_Controller {
 				$data["exito"] = 1;
 				$data["reg"] = $emp->buscar(["id" => $emp->getPK(), "_uno" => true]);
 
+				if (empty($id)) {
+					$user = new Usuario_model();
+					$user->guardar([
+						"nombre" => $emp->nombre,
+						"alias" => $_POST["alias"],
+						"clave" => sha1($_POST["clave"]),
+						"usuario_tipo_id" => 3,
+						"empresa_id" => $emp->getPK()
+					]);
+				}
+
 			} else {
 				$data["mensaje"] = $emp->getMensaje();
 			}

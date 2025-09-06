@@ -52,6 +52,24 @@
 						</div>
 					</div>
 
+					<h5 class="fw-normal mt-4">
+						<i class="far fa-user"></i> Datos de usuario
+					</h5>
+
+					<div class="row mb-2">
+						<label for="logo" class="col-sm-3 col-form-label">Usuario:</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="logo" name="alias" required>
+						</div>
+					</div>
+
+					<div class="row mb-2">
+						<label for="logo" class="col-sm-3 col-form-label">Clave:</label>
+						<div class="col-sm-9">
+							<input type="password" class="form-control" id="logo" name="clave" required>
+						</div>
+					</div>
+
 					<div class="row mb-2">
 						<div class="col-sm-12 text-end">
 							<button class="btn btn-success" :disabled="btnEmp">
