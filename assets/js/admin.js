@@ -234,6 +234,9 @@ var appAdmin = new Vue({
 				})
 
 			}
+		},
+		regresar() {
+			window.location.reload()
 		}
 	}
 })

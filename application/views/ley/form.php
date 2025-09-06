@@ -1,6 +1,6 @@
 <div class="card">
 	<div class="card-header">
-		<button class="btn-close float-end" @click="vista = 0"></button>
+		<button class="btn-close float-end" @click="regresar"></button>
 		<h5><i class="fa fa-add"></i> Cargar Nueva Ley</h5>
 	</div>
 	<div class="card-body">

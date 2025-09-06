@@ -58,7 +58,7 @@
 	<template v-if="vista === 4">
 		<div class="card mt-4">
 			<div class="card-header">
-				<button class="btn-close float-end" @click="vista = 0"></button>
+				<button class="btn-close float-end" @click="regresar"></button>
 				<h5 class="mb-0">
 					<i class="bi bi-card-checklist"></i>
 					Evaluaciones realizadas
