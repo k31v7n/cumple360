@@ -16,18 +16,41 @@
 					<small>Por tu seguridad y la nuestra, inicia sesión.</small>
 				</p>
 
-				<div class="p-5">
-					<form>
+				<div class="p-5 pt-3">
+
+					<div class="alert alert-danger" v-if="mensaje != null">
+						{{ mensaje }}
+					</div>
+
+					<form @submit.prevent="login">
 						<div class="mb-3">
-							<label for="exampleInputEmail1" class="form-label mb-0"><i class="fa-regular fa-user"></i> Usuario:</label>
-							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+							<label for="inpUsuario" class="form-label mb-0"><i class="fa-regular fa-user"></i> Usuario:</label>
+							<input
+								type="text"
+								class="form-control"
+								id="inpUsuario"
+								v-model="form.alias"
+								:required="true"
+							>
 						</div>
 						<div class="mb-3">
-							<label for="exampleInputPassword1" class="form-label mb-0"><i class="fa-solid fa-key"></i> Contraseña:</label>
-							<input type="password" class="form-control" id="exampleInputPassword1">
+							<label for="inpClave" class="form-label mb-0"><i class="fa-solid fa-key"></i> Contraseña:</label>
+							<input
+								type="password"
+								class="form-control"
+								id="inpClave"
+								v-model="form.clave"
+								:required="true"
+							>
 						</div>
 						<div class="d-grid gap-2">
-							<button type="submit" class="btn btn-success">Ingresar</button>
+							<button
+								type="submit"
+								class="btn btn-success"
+								:disabled="iniciando"
+							>
+								{{ iniciando ? 'Iniciando sesión' : 'Ingresar'}}
+							</button>
 						</div>
 					</form>
 				</div>
