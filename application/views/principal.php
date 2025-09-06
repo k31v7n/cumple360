@@ -17,7 +17,7 @@
 
     <style>
     	.navbar-brand span { font-weight: 800; letter-spacing: .2px; }
-    .card { border: 0; box-shadow: 0 6px 18px rgba(0,0,0,.06); border-radius: 1rem; }
+    .card { border: 0; box-shadow: 0 6px 18px rgba(0,0,0,.06);}
     .card-header { background: linear-gradient(90deg, rgba(25,135,84,.12), rgba(13,110,253,.12)); border-bottom: 0; }
     .badge-round { border-radius: 2rem; padding: .5rem .75rem; font-weight: 600; }
     .status-Cumple { background:#d1e7dd; color:#0f5132; }

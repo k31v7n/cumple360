@@ -138,5 +138,6 @@ $autoload['language'] = array();
 $autoload['model'] = array(
 	'Centro_model',
 	'Catalogo_model' => 'catalogo',
-	'Usuario_model'
+	'Usuario_model',
+	'Empresa_model'
 );

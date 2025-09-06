@@ -46,14 +46,14 @@ class Sesion extends CI_Controller {
 					$rol = $user->rol();
 					$emp = $user->empresa();
 
-					$ruta = FCPATH. "assets/img/";
+					$ruta = base_url("assets/img/");
 
 					$this->session->set_userdata("user", [
 						"id" => $user->getPK(),
 						"nombre" => $user->nombre,
-						"empresa" => $emp ? $emp->getPK() : null,
-						"empresa_id" => $emp ? $emp->nombre : null,
+						"empresa_id" => $emp ? $emp->getPK() : null,
 						"empresa_logo" => $emp ? $ruta . $emp->logo : null,
+						"empresa_nombre" => $emp ? $emp->nombre : null,
 						"rol" => $rol->getPK(),
 						"rol_nombre" => $rol->nombre
 					]);

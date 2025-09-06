@@ -9,6 +9,7 @@ class Empresa_model extends Centro_model {
 	public $representante;
 	public $usuario_id;
 	public $identificacion;
+	public $telefono;
 
 	public function __construct($id="")
 	{
