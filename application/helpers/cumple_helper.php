@@ -42,6 +42,18 @@ if (!function_exists("Hoy"))
 	}
 }
 
+if (!function_exists("formatoFecha"))
+{
+	function formatoFecha($fecha, $tipo=0)
+	{
+		if ($tipo == 1) {
+			return date("d/m/Y H:i:s", strtotime($fecha));
+		}
+
+		return date("d/m/Y", strtotime($fecha));
+	}
+}
+
 if (!function_exists("InicioMes"))
 {
 	function InicioMes()

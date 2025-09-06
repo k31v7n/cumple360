@@ -130,15 +130,13 @@ class Centro_model extends CI_Model {
 
 		if ($this->_pk === null) {
 			if (property_exists($this, 'usuario_id') && empty($this->usuario_id)) {
-				$this->usuario_id = $this->_ses->id;
+				$ses = $this->session->userdata("user");
+				$this->usuario_id = $ses["id"];
 			}
 
 			if (property_exists($this, 'empresa_id') && empty($this->empresa_id)) {
-				$this->empresa_id = $this->_ses->empresa_id;
-			}
-
-			if (property_exists($this, 'sucursal_id') && empty($this->sucursal_id)) {
-				$this->sucursal_id = $this->_ses->sucursal_id;
+				$ses = $this->session->userdata("user");
+				$this->empresa_id = $ses["empresa_id"];
 			}
 
 			$_set_code = false;
