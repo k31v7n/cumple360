@@ -37,9 +37,10 @@ class Principal extends CI_Controller {
 		} else {
 			$vista = "inicio/admin";
 			$datos["leyes"] = $this->Ley_model->buscar();
-			$datos["empresas"] = $this->Empresa_model->buscar();
+			
 		}
 
+		$datos["empresas"] = $this->Empresa_model->buscar();
 		$datos["solicitudes"] = $this->Solicitud_model->_buscar($filto);
 		$datos["vista"] = $vista;
 

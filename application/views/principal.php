@@ -25,7 +25,7 @@
     .card-header { background: linear-gradient(90deg, rgba(25,135,84,.12), rgba(13,110,253,.12)); border-bottom: 0; }
     .badge-round { border-radius: 2rem; padding: .5rem .75rem; font-weight: 600; }
     .status-Cumple { background:#d1e7dd; color:#0f5132; }
-    .status-"No cumple" { background:#f8d7da; color:#842029; }
+    .status-na { background:#f8d7da; color:#842029; }
     .status-Parcial { background:#fff3cd; color:#664d03; }
     .status-"N/A" { background:#e2e3e5; color:#41464b; }
     .status-Pendiente { background:#cff4fc; color:#055160; }

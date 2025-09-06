@@ -7,6 +7,8 @@ class Empresa extends CI_Controller {
 	{
 		parent::__construct();
 
+		$this->load->model("Solicitud_model");
+
 		$this->output
 		->set_content_type('application/json');
 	}
@@ -64,6 +66,22 @@ class Empresa extends CI_Controller {
 
 		$this->output
 		->set_output(json_encode($lista));
+	}
+
+	public function solicitudes($emp)
+	{
+		$this->output
+		->set_content_type('text/html');
+
+		$this->load->view("principal", [
+			"menu" => "menu",
+			"vista" => "solicitud/lista",
+			"emp" => $this->Empresa_model->buscar([
+				"id" => $emp,
+				"_uno" => true
+			]),
+			"solicitudes" => $this->Solicitud_model->_buscar(["empresa_id" => $emp])
+		]);
 	}
 }
 

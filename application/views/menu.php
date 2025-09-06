@@ -14,7 +14,7 @@
           <i class="bi bi-gear-fill"></i> <?php echo $user["nombre"]; ?>
         </button>
         <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item pointer" href="sesion/logout" id="logoutBtn">
+          <li><a class="dropdown-item pointer" href="<?php echo base_url("sesion/logout") ?>" id="logoutBtn">
             <i class="bi bi-box-arrow-left"></i> Cerrar sesión</a></li>
         </ul>
       </div>

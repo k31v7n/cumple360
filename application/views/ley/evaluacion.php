@@ -18,7 +18,7 @@
 					Evaluador <br> <span class="fw-bold"><?= $row->evaluador; ?></span>
 				</td>
 				<td class="text-center">
-					Fecha de evaluación <br> <span class="fw-bold"><?= $row->fecha_entrega; ?></span>
+					Fecha de evaluación <br> <span class="fw-bold"><?= formatoFecha($row->fecha_entrega); ?></span>
 				</td>
 				<td class="text-center">
 					Cumplimiento <br>
@@ -30,13 +30,20 @@
 
 				<td class="text-center">
 					Nivel de madurez <br>
-					<span class="badge bg-success">
+					<span class="badge bg-danger">
 						<?= $row->nombre_madurez; ?>
 					</span>
 				</td>
 
-				<td class="text-center" title="Imprimir constancia">
-					<a href="<?= base_url("solicitud/constancia/{$row->id}"); ?>" target="_blank" class="btn btn-sm btn-light border">
+				<td class="text-center">
+					<?php $ses = $this->session->userdata("user"); ?>
+					<?php if ($ses["rol"] == 2): ?>
+						<a href="<?= base_url("solicitud/ver/{$row->id}"); ?>" class="btn btn-sm btn-success border" title="Realizar auditoria">
+							<i class="far fa-list-alt"></i>
+						</a>
+					<?php endif ?>
+
+					<a href="<?= base_url("solicitud/constancia/{$row->id}"); ?>" target="_blank" class="btn btn-sm btn-light border" title="Imprimir constancia">
 						<i class="fa fa-print"></i>
 					</a>
 				</td>
